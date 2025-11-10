@@ -1,8 +1,8 @@
 """
 Fetch stock price data from Yahoo Finance and save it as CSV.
 
-Usage (in Colab or terminal):
-python src/data_fetch.py --tickers "AAPL MSFT AMZN GOOG TSLA" --start 2018-01-01 --end 2024-12-31
+Usage:
+python src/data_fetch.py --tickers "AAPL MSFT AMZN GOOG TSLA" --start 2020-01-01 --end 2025-10-30
 """
 
 import yfinance as yf
@@ -11,13 +11,18 @@ import argparse
 import os
 
 def fetch_data(tickers, start, end):
-    """Download Adjusted Close prices for given tickers and date range."""
+    """Download adjusted closing prices for given tickers."""
     print(f"📈 Fetching data for: {tickers}")
-    data = yf.download(tickers, start=start, end=end)["Adj Close"]
+    # Get the entire OHLCV data
+    data = yf.download(tickers, start=start, end=end, auto_adjust=True)
+    # Some versions of yfinance return a single-level column index
+    if isinstance(data.columns, pd.MultiIndex):
+        data = data["Close"]
+    else:
+        data = data[["Close"]]
     return data
 
 def main():
-    # --- Parse command line arguments ---
     parser = argparse.ArgumentParser(description="Fetch stock data from Yahoo Finance")
     parser.add_argument("--tickers", type=str, default="AAPL MSFT AMZN GOOG TSLA",
                         help="Space-separated list of tickers")
@@ -27,10 +32,8 @@ def main():
                         help="End date (YYYY-MM-DD)")
     args = parser.parse_args()
 
-    # --- Ensure data folder exists ---
     os.makedirs("data", exist_ok=True)
 
-    # --- Fetch and save ---
     tickers = args.tickers.split()
     data = fetch_data(tickers, args.start, args.end)
     output_path = "data/stock_data.csv"
