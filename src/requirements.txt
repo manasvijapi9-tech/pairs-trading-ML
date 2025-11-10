@@ -1,0 +1,8 @@
+pandas>=1.5
+numpy
+scipy
+scikit-learn
+statsmodels
+matplotlib
+yfinance
+joblib
