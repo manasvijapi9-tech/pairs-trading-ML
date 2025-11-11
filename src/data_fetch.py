@@ -28,7 +28,7 @@ def main():
                         help="Space-separated list of tickers")
     parser.add_argument("--start", type=str, default="2023-01-01",
                         help="Start date (YYYY-MM-DD)")
-    parser.add_argument("--end", type=str, default="2025-10-31",
+    parser.add_argument("--end", type=str, default="2025-10-30",
                         help="End date (YYYY-MM-DD)")
     args = parser.parse_args()
 
