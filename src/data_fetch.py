@@ -2,7 +2,7 @@
 Fetch stock price data from Yahoo Finance and save it as CSV.
 
 Usage:
-python src/data_fetch.py --tickers "AAPL MSFT AMZN GOOG TSLA" --start 2020-01-01 --end 2025-10-30
+python src/data_fetch.py --tickers "TCS.NS INFY.NS WIPRO.NS HCLTECH.NS" --start 2020-01-01 --end 2025-10-30
 """
 
 import yfinance as yf
