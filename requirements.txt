@@ -1,7 +1,8 @@
-yfinance
-pandas
+pandas>=1.5
 numpy
-matplotlib
-seaborn
-statsmodels
+scipy
 scikit-learn
+statsmodels
+matplotlib
+yfinance
+joblib
