@@ -2,7 +2,7 @@
 Fetch stock price data from Yahoo Finance and save it as CSV.
 
 Usage:
-python src/data_fetch.py --tickers "TCS.NS INFY.NS WIPRO.NS HCLTECH.NS" --start 2020-01-01 --end 2025-10-30
+python src/data_fetch.py --tickers "TCS.NS INFY.NS WIPRO.NS HCLTECH.NS" --start 2023-01-01 --end 2025-10-30
 """
 
 import yfinance as yf
@@ -24,11 +24,11 @@ def fetch_data(tickers, start, end):
 
 def main():
     parser = argparse.ArgumentParser(description="Fetch stock data from Yahoo Finance")
-    parser.add_argument("--tickers", type=str, default="AAPL MSFT AMZN GOOG TSLA",
+    parser.add_argument("--tickers", type=str, default="TCS.NS INFY.NS WIPRO.NS HCLTECH.NS",
                         help="Space-separated list of tickers")
-    parser.add_argument("--start", type=str, default="2018-01-01",
+    parser.add_argument("--start", type=str, default="2023-01-01",
                         help="Start date (YYYY-MM-DD)")
-    parser.add_argument("--end", type=str, default="2024-12-31",
+    parser.add_argument("--end", type=str, default="2025-10-31",
                         help="End date (YYYY-MM-DD)")
     args = parser.parse_args()
 
