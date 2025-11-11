@@ -42,30 +42,26 @@ Python · Pandas · NumPy · Matplotlib · Scikit-learn · Statsmodels · yFinan
 
 ---
 
+## How to Run
+
+You can run this project in **Google Colab** or your local terminal.
+
+### In Google Colab
+```bash
+!git clone https://github.com/manasvijapi9-tech/pairs-trading-ML.git
+%cd pairs-trading-ML
+!pip install -r requirements.txt
+!python src/data_fetch.py
+!python src/train_model.py
+
+
 ## Why This Project Matters  
 This project helped me understand how **data science connects with finance** — how to collect real data, clean it, analyze relationships, and make small predictions using ML.  
 It’s a practical example of combining **finance, coding, and statistics** to understand real-world market behavior.  
 
 ---
 
-##  How to Run the project
 
-**In Google Colab:**  
-```python
-!git clone https://github.com/manasvijapi9-tech/pairs-trading-ML.git
-%cd pairs-trading-ML
-!pip install -r requirements.txt
-!python src/data_fetch.py
-!python src/analyze_pairs.py
-!python src/train_model.py
-
-
-## To View Plots:
-
-from IPython.display import Image, display
-display(Image("data/corr_heatmap.png"))
-display(Image("data/top_pair_scatter.png"))
-display(Image("data/prediction_plot.png"))
 
 
 ## Stocks & Time Period
