@@ -1,6 +1,7 @@
-# 📊 Pairs Trading Analysis using Python & Machine Learning  
+# Pairs Trading Analysis using Python & Machine Learning  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/manasvijapi9-tech/pairs-trading-ML/blob/main/pairs_trading_analysis.ipynb)
 
-### 💡 Overview  
+### Overview  
 This project explores **Pairs Trading**, a real-world strategy used in quantitative finance to find two stocks that usually move together.  
 It uses Python, data analysis, and a simple machine learning model to study stock relationships in the **Indian IT sector** — TCS, Infosys, Wipro, and HCLTech.  
 
@@ -8,7 +9,7 @@ I used **real stock data** from **Yahoo Finance (Jan 2023 – Oct 2025)** to ana
 
 ---
 
-## 🧩 What the Project Does  
+## What the Project Does  
 
 | Step | Description |
 |------|--------------|
@@ -20,12 +21,12 @@ I used **real stock data** from **Yahoo Finance (Jan 2023 – Oct 2025)** to ana
 
 ---
 
-## ⚙️ Tools & Libraries  
+##  Tools & Libraries  
 Python · Pandas · NumPy · Matplotlib · Scikit-learn · Statsmodels · yFinance · Google Colab · GitHub  
 
 ---
 
-## 📈 Example Results  
+##  Example Results  
 
 **Correlation Findings:**  
 - TCS & Infosys have the strongest correlation (~0.88)  
@@ -37,17 +38,17 @@ Python · Pandas · NumPy · Matplotlib · Scikit-learn · Statsmodels · yFinan
 | **R² Score (TCS → INFY)** | 0.87 |
 | **Mean Squared Error** | 250.45 |
 
-✅ The model explains about **87% of Infosys’s price movement** based on TCS’s prices.
+- The model explains about **87% of Infosys’s price movement** based on TCS’s prices.
 
 ---
 
-## 🧠 Why This Project Matters  
+## Why This Project Matters  
 This project helped me understand how **data science connects with finance** — how to collect real data, clean it, analyze relationships, and make small predictions using ML.  
 It’s a practical example of combining **finance, coding, and statistics** to understand real-world market behavior.  
 
 ---
 
-## 🧮 How to Run  
+##  How to Run the project
 
 **In Google Colab:**  
 ```python
@@ -67,7 +68,7 @@ display(Image("data/top_pair_scatter.png"))
 display(Image("data/prediction_plot.png"))
 
 
-📆 Stocks & Time Period
+## Stocks & Time Period
 
 Stocks:
 TCS.NS, INFY.NS, WIPRO.NS, HCLTECH.NS
@@ -75,7 +76,7 @@ Time Period: Jan 2023 → Oct 2025
 Source: Yahoo Finance
 
 
-👩‍💻 Author
+## Author
 
 Manasvi Japi
 Student — Interested in Quantitative Finance and Data Science
